@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background - clean lab environment -->
+  <rect width="800" height="600" fill="#f1f5f9"/>
+  <rect x="0" y="400" width="800" height="200" fill="#e2e8f0"/>
+  <!-- Chamber main body -->
+  <rect x="150" y="100" width="500" height="380" rx="16" fill="#e2e8f0"/>
+  <rect x="158" y="108" width="484" height="364" rx="12" fill="#f8fafc"/>
+  <!-- Chamber door window -->
+  <rect x="180" y="130" width="440" height="280" rx="8" fill="#0f172a"/>
+  <!-- Inner chamber view -->
+  <rect x="185" y="135" width="430" height="270" rx="6" fill="#1e293b"/>
+  <!-- Chamber interior grid -->
+  <line x1="300" y1="135" x2="300" y2="405" stroke="#334155" stroke-width="1"/>
+  <line x1="500" y1="135" x2="500" y2="405" stroke="#334155" stroke-width="1"/>
+  <line x1="185" y1="270" x2="615" y2="270" stroke="#334155" stroke-width="1"/>
+  <!-- Chamber shelf with items -->
+  <rect x="200" y="340" width="180" height="50" rx="4" fill="#334155"/>
+  <rect x="420" y="340" width="180" height="50" rx="4" fill="#334155"/>
+  <!-- Test tubes in chamber -->
+  <rect x="220" y="300" width="20" height="45" rx="10" fill="#dbeafe"/>
+  <rect x="250" y="305" width="20" height="40" rx="10" fill="#dcfce7"/>
+  <rect x="280" y="298" width="20" height="47" rx="10" fill="#fef9c3"/>
+  <rect x="440" y="300" width="20" height="45" rx="10" fill="#fce7f3"/>
+  <rect x="470" y="305" width="20" height="40" rx="10" fill="#ede9fe"/>
+  <rect x="540" y="298" width="20" height="47" rx="10" fill="#ffedd5"/>
+  <!-- Chamber door frame -->
+  <rect x="180" y="130" width="440" height="280" rx="8" stroke="#94a3b8" stroke-width="4" fill="none"/>
+  <!-- Door handle -->
+  <rect x="595" y="250" width="12" height="60" rx="6" fill="#94a3b8"/>
+  <!-- Control panel on right side of chamber -->
+  <rect x="640" y="140" width="100" height="260" rx="8" fill="#e2e8f0"/>
+  <rect x="648" y="148" width="84" height="244" rx="6" fill="#1e293b"/>
+  <!-- Temperature display -->
+  <rect x="655" y="155" width="70" height="36" rx="4" fill="#0f172a"/>
+  <text x="690" y="169" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8">TEMP �C</text>
+  <text x="690" y="184" text-anchor="middle" font-family="monospace" font-size="14" fill="#f97316" font-weight="bold">85�C</text>
+  <!-- Humidity display -->
+  <rect x="655" y="198" width="70" height="36" rx="4" fill="#0f172a"/>
+  <text x="690" y="212" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8">HUMID</text>
+  <text x="690" y="227" text-anchor="middle" font-family="monospace" font-size="14" fill="#3b82f6" font-weight="bold">45%</text>
+  <!-- Status indicators -->
+  <rect x="655" y="240" width="70" height="20" rx="4" fill="#166534"/>
+  <text x="690" y="254" text-anchor="middle" font-family="monospace" font-size="8" fill="#22c55e">� HEAT</text>
+  <rect x="655" y="265" width="70" height="20" rx="4" fill="#1e3a5f"/>
+  <text x="690" y="279" text-anchor="middle" font-family="monospace" font-size="8" fill="#60a5fa">� COOL</text>
+  <rect x="655" y="290" width="70" height="20" rx="4" fill="#1e3a5f"/>
+  <text x="690" y="304" text-anchor="middle" font-family="monospace" font-size="8" fill="#60a5fa">� HUM</text>
+  <!-- Control buttons -->
+  <rect x="655" y="320" width="30" height="20" rx="4" fill="#334155"/>
+  <rect x="690" y="320" width="30" height="20" rx="4" fill="#334155"/>
+  <rect x="655" y="345" width="30" height="20" rx="4" fill="#f97316"/>
+  <rect x="690" y="345" width="30" height="20" rx="4" fill="#3b82f6"/>
+  <!-- Chamber label -->
+  <rect x="260" y="80" width="280" height="30" rx="6" fill="#0891b2"/>
+  <text x="400" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">ENVIRONMENTAL TEST CHAMBER</text>
+  <!-- Temperature range indicator -->
+  <rect x="150" y="430" width="180" height="50" rx="8" fill="#1e293b"/>
+  <text x="240" y="448" text-anchor="middle" font-family="monospace" font-size="9" fill="#94a3b8">TEMP RANGE</text>
+  <text x="240" y="470" text-anchor="middle" font-family="monospace" font-size="16" fill="#f97316" font-weight="bold">-40�C ~ +150�C</text>
+  <!-- Brand badge -->
+  <rect x="470" y="430" width="180" height="50" rx="8" fill="#1e40af"/>
+  <text x="560" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">NEWARE</text>
+</svg>

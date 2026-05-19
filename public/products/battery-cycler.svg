@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f1f5f9"/>
+  <!-- Lab bench surface -->
+  <rect x="0" y="480" width="800" height="120" fill="#e2e8f0"/>
+  <rect x="0" y="480" width="800" height="4" fill="#cbd5e1"/>
+  <!-- Battery cycler main unit - center -->
+  <rect x="240" y="200" width="320" height="280" rx="12" fill="#1e293b"/>
+  <rect x="248" y="208" width="304" height="264" rx="8" fill="#0f172a"/>
+  <!-- Display screen -->
+  <rect x="268" y="220" width="264" height="160" rx="6" fill="#1e293b"/>
+  <!-- Screen content - test waveform -->
+  <polyline points="268,320 308,280 348,350 388,270 428,340 468,300 508,360 532,320" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+  <polyline points="268,340 308,360 348,320 388,370 428,310 468,380 508,330 532,360" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+  <!-- Grid lines on screen -->
+  <line x1="268" y1="260" x2="532" y2="260" stroke="#334155" stroke-width="0.5"/>
+  <line x1="268" y1="300" x2="532" y2="300" stroke="#334155" stroke-width="0.5"/>
+  <line x1="268" y1="340" x2="532" y2="340" stroke="#334155" stroke-width="0.5"/>
+  <line x1="300" y1="220" x2="300" y2="380" stroke="#334155" stroke-width="0.5"/>
+  <line x1="350" y1="220" x2="350" y2="380" stroke="#334155" stroke-width="0.5"/>
+  <line x1="400" y1="220" x2="400" y2="380" stroke="#334155" stroke-width="0.5"/>
+  <line x1="450" y1="220" x2="450" y2="380" stroke="#334155" stroke-width="0.5"/>
+  <line x1="500" y1="220" x2="500" y2="380" stroke="#334155" stroke-width="0.5"/>
+  <!-- Status bar on screen -->
+  <rect x="268" y="220" width="264" height="22" rx="6" fill="#1e3a5f"/>
+  <text x="280" y="235" font-family="monospace" font-size="10" fill="#60a5fa">CH01-16</text>
+  <text x="480" y="235" font-family="monospace" font-size="9" fill="#22c55e">� RUN</text>
+  <text x="420" y="235" font-family="monospace" font-size="9" fill="#94a3b8">10Hz</text>
+  <!-- Control panel area -->
+  <rect x="268" y="395" width="264" height="65" rx="6" fill="#1e293b"/>
+  <!-- Control buttons row -->
+  <rect x="280" y="405" width="36" height="22" rx="4" fill="#334155"/>
+  <rect x="325" y="405" width="36" height="22" rx="4" fill="#334155"/>
+  <rect x="370" y="405" width="36" height="22" rx="4" fill="#3b82f6"/>
+  <rect x="415" y="405" width="36" height="22" rx="4" fill="#334155"/>
+  <!-- Data readouts -->
+  <rect x="460" y="400" width="68" height="55" rx="4" fill="#0f172a"/>
+  <text x="494" y="418" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8">VOLTAGE</text>
+  <text x="494" y="438" text-anchor="middle" font-family="monospace" font-size="11" fill="#60a5fa" font-weight="bold">4.200V</text>
+  <rect x="280" y="432" width="68" height="28" rx="4" fill="#0f172a"/>
+  <text x="314" y="447" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8">CURRENT</text>
+  <text x="314" y="456" text-anchor="middle" font-family="monospace" font-size="9" fill="#22c55e">1.000A</text>
+  <rect x="355" y="432" width="68" height="28" rx="4" fill="#0f172a"/>
+  <text x="389" y="447" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8">CAPACITY</text>
+  <text x="389" y="456" text-anchor="middle" font-family="monospace" font-size="9" fill="#f59e0b">2345mAh</text>
+  <!-- Vent slots at bottom -->
+  <rect x="268" y="465" width="264" height="5" rx="2" fill="#334155"/>
+  <!-- Connection cables -->
+  <path d="M 350 480 L 350 520 L 280 540" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 450 480 L 450 520 L 520 540" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Banana plugs -->
+  <circle cx="280" cy="545" r="8" fill="#ef4444"/>
+  <circle cx="520" cy="545" r="8" fill="#22c55e"/>
+  <!-- Battery holder on bench -->
+  <rect x="80" y="400" width="120" height="80" rx="6" fill="#cbd5e1"/>
+  <rect x="90" y="395" width="100" height="10" rx="5" fill="#94a3b8"/>
+  <rect x="95" y="410" width="90" height="60" rx="4" fill="#f8fafc"/>
+  <!-- Battery cell in holder -->
+  <rect x="115" y="425" width="50" height="75" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="125" y="412" width="30" height="15" rx="4" fill="#93c5fd"/>
+  <text x="140" y="470" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e40af">18650</text>
+  <!-- Small accessory on right -->
+  <rect x="600" y="420" width="100" height="60" rx="6" fill="#1e293b"/>
+  <rect x="608" y="428" width="84" height="30" rx="4" fill="#0f172a"/>
+  <text x="650" y="447" text-anchor="middle" font-family="monospace" font-size="8" fill="#60a5fa">4.198V</text>
+  <rect x="608" y="462" width="40" height="12" rx="2" fill="#334155"/>
+  <rect x="652" y="462" width="40" height="12" rx="2" fill="#334155"/>
+  <!-- Label badge -->
+  <rect x="310" y="175" width="180" height="26" rx="4" fill="#3b82f6"/>
+  <text x="400" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">NEWARE CT-4008Q</text>
+</svg>

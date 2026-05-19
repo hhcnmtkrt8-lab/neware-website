@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f1f5f9"/>
+  <!-- Production line -->
+  <rect x="0" y="140" width="400" height="80" rx="0" fill="#e2e8f0"/>
+  <rect x="0" y="135" width="400" height="12" rx="0" fill="#cbd5e1"/>
+  <!-- Conveyor rollers -->
+  <circle cx="40" cy="152" r="8" fill="#94a3b8"/>
+  <circle cx="100" cy="152" r="8" fill="#94a3b8"/>
+  <circle cx="160" cy="152" r="8" fill="#94a3b8"/>
+  <circle cx="220" cy="152" r="8" fill="#94a3b8"/>
+  <circle cx="280" cy="152" r="8" fill="#94a3b8"/>
+  <circle cx="340" cy="152" r="8" fill="#94a3b8"/>
+  <!-- Battery cells on line -->
+  <rect x="60" y="125" width="70" height="30" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="65" y="118" width="60" height="10" rx="3" fill="#93c5fd"/>
+  <rect x="130" y="125" width="70" height="30" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="135" y="118" width="60" height="10" rx="3" fill="#fcd34d"/>
+  <rect x="250" y="125" width="70" height="30" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+  <rect x="255" y="118" width="60" height="10" rx="3" fill="#86efac"/>
+  <!-- Equipment housing - left -->
+  <rect x="10" y="40" width="120" height="100" rx="8" fill="#e2e8f0"/>
+  <rect x="20" y="55" width="100" height="60" rx="4" fill="#0f172a"/>
+  <polyline points="20,90 50,75 80,100 110,70 130,85" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  <rect x="20" y="120" width="40" height="15" rx="2" fill="#334155"/>
+  <rect x="70" y="120" width="40" height="15" rx="2" fill="#3b82f6"/>
+  <!-- Equipment housing - right -->
+  <rect x="270" y="40" width="120" height="100" rx="8" fill="#e2e8f0"/>
+  <rect x="280" y="55" width="100" height="60" rx="4" fill="#0f172a"/>
+  <rect x="285" y="60" width="90" height="50" rx="2" fill="#1e3a5f"/>
+  <text x="330" y="90" text-anchor="middle" font-family="monospace" font-size="12" fill="#22c55e">96 CH</text>
+  <rect x="280" y="120" width="100" height="15" rx="2" fill="#334155"/>
+  <!-- Arms/robotic -->
+  <rect x="140" y="80" width="120" height="8" rx="4" fill="#64748b"/>
+  <rect x="140" y="60" width="8" height="40" rx="4" fill="#64748b"/>
+  <rect x="252" y="60" width="8" height="40" rx="4" fill="#64748b"/>
+  <circle cx="144" cy="100" r="6" fill="#94a3b8"/>
+  <circle cx="256" cy="100" r="6" fill="#94a3b8"/>
+  <!-- Brand -->
+  <rect x="140" y="245" width="120" height="28" rx="6" fill="#1e40af"/>
+  <text x="200" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">FORMATION SYSTEM</text>
+</svg>
