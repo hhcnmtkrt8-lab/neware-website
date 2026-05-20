@@ -9,7 +9,6 @@ import { ApplicationSection } from "@/components/home/ApplicationSection";
 import { VideoSection } from "@/components/home/VideoSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
-import { VietnamHomeSection } from "@/components/home/VietnamHomeSection";
 
 export async function generateMetadata({
   params,
@@ -17,15 +16,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isVi = locale === "vi";
   const isZh = locale === "zh";
+  const isVi = locale === "vi";
 
   return {
     title: {
-      default: isVi
-        ? "NEWARE Vietnam — Thiết bị kiểm tra pin & Điện trở công nghiệp"
-        : isZh
+      default: isZh
         ? "NEWARE — 精密电池测试设备制造专家"
+        : isVi
+        ? "NEWARE Vietnam — Thiết bị kiểm tra pin chính xác cao"
         : "NEWARE — Precision Battery Testing Equipment Since 1998",
       template: "%s | NEWARE",
     },
@@ -39,23 +38,6 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const isZh = locale === "zh";
-  const isVi = locale === "vi";
-
-  if (isVi) {
-    return (
-      <>
-        <VietnamHomeSection />
-        <StatsSection />
-        <ProductSection />
-        <WhyNewareSection />
-        <ApplicationSection />
-        <VideoSection />
-        <TestimonialsSection />
-        <CTASection />
-      </>
-    );
-  }
 
   return (
     <>
