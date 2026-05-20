@@ -179,7 +179,7 @@ export function FloatingContact() {
   const messengers = MESSENGER_METHODS(locale, qrLabels, zaloDeep, whatsappDeep, telegramDeep);
 
   return (
-    <div className="fixed bottom-6 right-4 z-[60] flex flex-col items-end gap-3">
+    <div className="fixed bottom-6 right-4 z-40 flex flex-col items-end gap-3">
       {/* Expandable contact panel */}
       <div
         className={`flex flex-col gap-3 transition-all duration-300 origin-bottom-right ${
