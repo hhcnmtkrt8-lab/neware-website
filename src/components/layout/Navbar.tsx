@@ -183,7 +183,12 @@ export function Navbar() {
                   <div
                     key={item.key}
                     className="relative"
-                    onMouseEnter={() => hasDropdown && handleDropdownEnter(item.key)}
+                    onMouseEnter={() => {
+                      // #region agent debug
+                      fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'8abdd1'},body:JSON.stringify({sessionId:'8abdd1',id:'log_dropdown_enter_direct',timestamp:Date.now(),location:'Navbar.tsx:187',message:'MouseEnter on dropdown container',data:{key:item.key,hasDropdown,hypothesisId:'H1-H4'},runId:'pre-fix'})}).catch(()=>{});
+                      // #endregion
+                      hasDropdown && handleDropdownEnter(item.key)
+                    }}
                     onMouseLeave={() => hasDropdown && handleDropdownLeave(item.key)}
                   >
                     {/* #region agent debug */}
