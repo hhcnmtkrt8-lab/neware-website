@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { products, productRoutes } from "@/data/neware";
+import { locales } from "@/i18n/request";
 import ProductDetailClient from "./ProductDetailClient";
 import { ProductJsonLd } from "@/components/seo/ProductJsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
@@ -19,7 +20,13 @@ const OG_IMAGES: Record<string, string> = {
 };
 
 export function generateStaticParams() {
-  return products.map((p) => ({ id: p.id }));
+  const params: { locale: string; id: string }[] = [];
+  for (const locale of locales) {
+    for (const p of products) {
+      params.push({ locale, id: p.id });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

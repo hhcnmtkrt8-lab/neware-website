@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { vietnamProducts, vietnamProductRoutes, vietnamSeoKeywords } from "@/data/neware-vietnam";
+import { locales } from "@/i18n/request";
 import ResistorDetailClient from "./ResistorDetailClient";
 
 const SITE_URL = process.env.SITE_URL ?? "https://neware.vn";
@@ -11,7 +12,13 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return vietnamProducts.map((p) => ({ id: p.id }));
+  const params: { locale: string; id: string }[] = [];
+  for (const locale of locales) {
+    for (const p of vietnamProducts) {
+      params.push({ locale, id: p.id });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
