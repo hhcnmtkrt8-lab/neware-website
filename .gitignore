@@ -40,6 +40,12 @@ commit-msg.txt
 .DS_Store
 Thumbs.db
 
+# Build info
+*.tsbuildinfo
+
+# GitHub workflows (PAT lacks workflow scope)
+.github/
+
 # Analysis reports
 ANALYSIS_REPORT*.md
 audit_checklist.md
