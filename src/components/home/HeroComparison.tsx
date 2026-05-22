@@ -17,9 +17,6 @@ const BAR_HEIGHTS = [48, 68, 40, 82, 58, 32, 72, 52];
 export function HeroComparison({ locale }: { locale: string }) {
   const tComp = useTranslations("home.competitorCompare");
   const tHero = useTranslations("home.hero");
-  // #region agent debug
-  fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'f9984f'},body:JSON.stringify({sessionId:'f9984f',location:'HeroComparison.tsx:17',message:'monitorTitle resolved',data:{monitorTitle:tHero.raw('monitorTitle'),locale},timestamp:Date.now(),hypothesisId:'ZH-MONITOR'})}).catch(()=>{});
-  // #endregion
   const [showCompetitorCompare, setShowCompetitorCompare] = useState(false);
 
   return (

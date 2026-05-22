@@ -38,9 +38,6 @@ export function Footer() {
   const locale = (params.locale as string) || "en";
   const isZh = locale === "zh";
   const isVi = locale === "vi";
-  // #region agent debug
-  fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'f9984f'},body:JSON.stringify({sessionId:'f9984f',location:'Footer.tsx:35',message:'footer keys',data:{locale,about:t.raw('about'),productsTitle:t.raw('products.title'),supportTitle:t.raw('support.title'),socialLinkedIn:t.raw('social.linkedIn'),isoCertified:t.raw('isoCertified')},timestamp:Date.now(),hypothesisId:'FOOTER-ALL-MISSING'})}).catch(()=>{});
-  // #endregion
 
   const year = new Date().getFullYear();
 

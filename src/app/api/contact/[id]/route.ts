@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { sqlite } from "@/lib/db";
-import { contacts } from "@/lib/schema";
+import { db } from "@/lib/db";
 
 export async function DELETE(request: Request) {
   try {
@@ -11,8 +10,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: "Missing id" }, { status: 400 });
     }
 
-    const stmt = sqlite.prepare(`DELETE FROM contacts WHERE id = ?`);
-    stmt.run(id);
+    await db.delete("contacts", { id: Number(id) });
 
     return NextResponse.json({ success: true });
   } catch (error) {

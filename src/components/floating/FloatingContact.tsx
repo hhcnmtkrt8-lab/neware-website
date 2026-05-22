@@ -8,9 +8,9 @@ import { MessageCircle, Phone, X, ChevronUp, MessageSquarePlus } from "lucide-re
 // ============================================================
 //  EDIT YOUR CONTACT DETAILS HERE
 // ============================================================
-const WHATSAPP_NUMBER = "447851559319"; // ← Replace with your real WhatsApp Business number
-const ZALO_NUMBER     = "YOUR_ZALO_NUMBER";         // ← Replace with your Zalo number/ID
-const TELEGRAM_HANDLE = "YOUR_TELEGRAM_USERNAME"; // ← Replace with your Telegram username (no @)
+const WHATSAPP_NUMBER = "447851559319";    // WhatsApp Business number
+const ZALO_ID         = "batteryxlab";    // Zalo username/ID
+const TELEGRAM_HANDLE = "batteryxlab";    // Telegram username (no @)
 // ============================================================
 
 const BASE_PATH = "/images";
@@ -170,7 +170,7 @@ export function FloatingContact() {
 
   const l = panelLabels[locale] || panelLabels.en;
 
-  const zaloDeep = `https://zalo.me/${ZALO_NUMBER}`;
+  const zaloDeep = `https://zalo.me/${ZALO_ID}`;
   const whatsappDeep = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     "Hi NEWARE, I'm interested in your battery testing equipment. Could you provide a quote?"
   )}`;

@@ -112,17 +112,11 @@ export function Navbar() {
   }, [activeDropdown]);
 
   const handleDropdownEnter = (key: string) => {
-    // #region agent debug
-    fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'8abdd1'},body:JSON.stringify({sessionId:'8abdd1',id:'log_dropdown_enter',timestamp:Date.now(),location:'Navbar.tsx:114',message:'Dropdown enter',data:{key,currentDropdown:typeof activeDropdown},hypothesisId:'H1'})}).catch(()=>{});
-    // #endregion
     if (dropdownTimers.current[key]) clearTimeout(dropdownTimers.current[key]);
     setActiveDropdown(key);
   };
 
   const handleDropdownLeave = (key: string) => {
-    // #region agent debug
-    fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'8abdd1'},body:JSON.stringify({sessionId:'8abdd1',id:'log_dropdown_leave',timestamp:Date.now(),location:'Navbar.tsx:121',message:'Dropdown leave',data:{key,hypothesisId:'H1'})}).catch(()=>{});
-    // #endregion
     dropdownTimers.current[key] = setTimeout(() => {
       setActiveDropdown((prev) => (prev === key ? null : prev));
     }, 120);
@@ -183,17 +177,9 @@ export function Navbar() {
                   <div
                     key={item.key}
                     className="relative"
-                    onMouseEnter={() => {
-                      // #region agent debug
-                      fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'8abdd1'},body:JSON.stringify({sessionId:'8abdd1',id:'log_dropdown_enter_direct',timestamp:Date.now(),location:'Navbar.tsx:187',message:'MouseEnter on dropdown container',data:{key:item.key,hasDropdown,hypothesisId:'H1-H4'},runId:'pre-fix'})}).catch(()=>{});
-                      // #endregion
-                      hasDropdown && handleDropdownEnter(item.key)
-                    }}
+                    onMouseEnter={() => hasDropdown && handleDropdownEnter(item.key)}
                     onMouseLeave={() => hasDropdown && handleDropdownLeave(item.key)}
                   >
-                    {/* #region agent debug */}
-                    <div data-dropdown-trigger={item.key} data-active={String(isActive)} style={{display:'none'}}></div>
-                    {/* #endregion */}
                     <Link
                       href={`/${locale}${item.href}`}
                       className={cn(

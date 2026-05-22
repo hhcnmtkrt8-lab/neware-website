@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { contacts } from "@/lib/schema";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { z } from "zod";
+
+// Prevent static generation
+export const dynamic = "force-dynamic";
 
 const resourceSchema = z.object({
   name: z.string().optional(),
@@ -11,8 +13,6 @@ const resourceSchema = z.object({
   resourceId: z.enum(["selection-guide", "energy-roi", "precision-rd"]),
   locale: z.string().optional(),
 });
-
-const ALLOWED_RESOURCES = ["selection-guide", "energy-roi", "precision-rd"];
 
 const resourceNames: Record<string, { zh: string; en: string }> = {
   "selection-guide": { zh: "电池测试设备选型指南", en: "Battery Testing Equipment Selection Guide" },
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     const resourceName = resourceNames[resourceId] ?? { zh: resourceId, en: resourceId };
     const displayName = (locale === "zh" ? resourceName.zh : resourceName.en);
 
-    await db.insert(contacts).values({
+    await db.insert("contacts", {
       name: name || email,
       email,
       company: company || null,

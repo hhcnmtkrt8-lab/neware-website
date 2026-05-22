@@ -28,9 +28,6 @@ export function HeroSection() {
   const t = useTranslations("home.hero");
   const params = useParams();
   const locale = (params.locale as string) || "en";
-  // #region agent debug
-  fetch('http://127.0.0.1:7656/ingest/024ff6c4-86da-497c-9de0-3eb0d4149646',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'f9984f'},body:JSON.stringify({sessionId:'f9984f',location:'HeroSection.tsx:27',message:'hero keys',data:{locale,trustHighTech:t.raw('trustHighTech'),trustAccuracy:t.raw('trustAccuracy'),trustExperience:t.raw('trustExperience')},timestamp:Date.now(),hypothesisId:'FOOTER-ALL-MISSING'})}).catch(()=>{});
-  // #endregion
 
   return (
     <section className="relative overflow-hidden" style={{ backgroundColor: "#f8fafc" }}>

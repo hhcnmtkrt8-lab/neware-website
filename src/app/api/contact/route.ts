@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { contacts } from "@/lib/schema";
-import { desc, eq } from "drizzle-orm";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { z } from "zod";
+
+// Prevent static generation
+export const dynamic = "force-dynamic";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -39,7 +40,7 @@ export async function POST(request: Request) {
 
     const { name, email, company, phone, product, message } = result.data;
 
-    await db.insert(contacts).values({
+    await db.insert("contacts", {
       name,
       email,
       company: company || null,
@@ -63,7 +64,7 @@ export async function POST(request: Request) {
 // PROTECTED by middleware: Only authenticated admins
 export async function GET() {
   try {
-    const results = await db.select().from(contacts).orderBy(desc(contacts.createdAt));
+    const results = await db.select("contacts");
     return NextResponse.json(results);
   } catch (error) {
     console.error("Contacts fetch error:", error);
@@ -84,7 +85,7 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: "Missing id" }, { status: 400 });
     }
 
-    await db.update(contacts).set({ status }).where(eq(contacts.id, id));
+    await db.update("contacts", { status }, { id });
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -106,7 +107,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: "Missing id" }, { status: 400 });
     }
 
-    await db.delete(contacts).where(eq(contacts.id, Number(id)));
+    await db.delete("contacts", { id: Number(id) });
 
     return NextResponse.json({ success: true });
   } catch (error) {

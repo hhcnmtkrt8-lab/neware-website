@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Sitemap
+Sitemap: https://www.neware.com.cn/sitemap.xml
