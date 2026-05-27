@@ -68,6 +68,11 @@
 }
 
 @layer utilities {
+  /* ── Navbar dropdown — JS-controlled visibility ─────────────────────────────── */
+  /* Used by Navbar.tsx dropdown system */
+  .dropdown-open { display: block !important; }
+  .dropdown-hidden { display: none !important; }
+
   .text-balance {
     text-wrap: balance;
   }

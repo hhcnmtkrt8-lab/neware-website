@@ -105,11 +105,10 @@ export function Navbar() {
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
-      if (activeDropdown) setActiveDropdown(null);
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [activeDropdown]);
+  }, []);
 
   const handleDropdownEnter = (key: string) => {
     if (dropdownTimers.current[key]) clearTimeout(dropdownTimers.current[key]);
@@ -170,80 +169,62 @@ export function Navbar() {
               </Link>
 
               {/* Dropdown nav items */}
-              {desktopNavItems.filter(i => i.hasDropdown).map((item) => {
-                const hasDropdown = item.hasDropdown;
-                const isActive = activeDropdown === item.key;
-                return (
-                  <div
-                    key={item.key}
-                    className="relative"
-                    onMouseEnter={() => hasDropdown && handleDropdownEnter(item.key)}
-                    onMouseLeave={() => hasDropdown && handleDropdownLeave(item.key)}
+              {desktopNavItems.filter(i => i.hasDropdown).map((item) => (
+                <div
+                  key={item.key}
+                  className="relative dropdown-container"
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveDropdown(activeDropdown === item.key ? null : item.key);
+                    }}
+                    className="flex items-center gap-1 px-3.5 py-2 rounded-lg text-[13.5px] font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all duration-150 whitespace-nowrap cursor-pointer"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded={activeDropdown === item.key}
                   >
-                    <Link
-                      href={`/${locale}${item.href}`}
-                      className={cn(
-                        "flex items-center gap-1 px-3.5 py-2 rounded-lg text-[13.5px] font-medium transition-all duration-150 whitespace-nowrap",
-                        isActive ? "text-blue-600 bg-blue-50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
-                      )}
-                      role="menuitem"
-                      aria-haspopup={hasDropdown ? "true" : undefined}
-                      aria-expanded={hasDropdown ? isActive : undefined}
-                    >
-                      {t(item.key)}
-                      {hasDropdown && (
-                        <ChevronDown
-                          className="h-3.5 w-3.5 transition-transform duration-200"
-                          style={{ transform: isActive ? "rotate(180deg)" : "rotate(0deg)" }}
-                        />
-                      )}
-                    </Link>
+                    {t(item.key)}
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200" style={{ transform: activeDropdown === item.key ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+                  </button>
 
-                    {/* Dropdown Panel */}
-                    {hasDropdown && isActive && (
-                      <div
-                        className="absolute top-full left-0 mt-2 w-72 rounded-2xl py-2 z-50"
-                        style={{
-                          background: "rgba(255,255,255,0.97)",
-                          border: "1px solid rgba(226,232,240,0.8)",
-                          boxShadow: "0 16px 48px -8px rgba(148,163,184,0.28), 0 4px 12px -2px rgba(148,163,184,0.12)",
-                          backdropFilter: "blur(20px)",
-                        }}
-                        onMouseEnter={() => handleDropdownEnter(item.key)}
-                        onMouseLeave={() => handleDropdownLeave(item.key)}
-                      >
-                        {/* #region agent debug */}
-                        <div id="debug-dropdown-active" data-dropdown={item.key} style={{display:'none'}} data-visible="true"></div>
-                        {/* #endregion */}
-                        <div className="px-4 py-2 mb-1 border-b border-slate-100">
-                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t(item.key)}</span>
-                        </div>
-                        {subNavItems(item.key).map((subItem) => {
-                          const Icon = subItem.icon;
-                          return (
-                            <Link
-                              key={subItem.href}
-                              href={`/${locale}${subItem.href}`}
-                              onClick={() => setActiveDropdown(null)}
-                              className="group/item flex items-start gap-3 mx-2 px-3 py-2.5 rounded-xl hover:bg-blue-50/70 transition-colors"
-                            >
-                              <ChevronRight className="h-3.5 w-3.5 text-slate-300 mt-[3px] group-hover/item:text-blue-500 group-hover/item:translate-x-0.5 transition-all shrink-0" />
-                              <div>
-                                <p className="text-[13px] font-semibold text-slate-700 group-hover/item:text-blue-600 leading-snug">
-                                  {t(subItem.labelKey)}
-                                </p>
-                                <p className="text-[11px] text-slate-400 mt-0.5 leading-snug line-clamp-1">
-                                  {t(subItem.descKey)}
-                                </p>
-                              </div>
-                            </Link>
-                          );
-                        })}
+                  {/* Dropdown Panel */}
+                  {activeDropdown === item.key && (
+                    <div
+                      className="absolute top-full left-0 w-72 rounded-2xl py-2 mt-2"
+                      style={{
+                        background: "rgba(255,255,255,0.97)",
+                        border: "1px solid rgba(226,232,240,0.8)",
+                        boxShadow: "0 16px 48px -8px rgba(148,163,184,0.28), 0 4px 12px -2px rgba(148,163,184,0.12)",
+                        backdropFilter: "blur(20px)",
+                        zIndex: 50,
+                      }}
+                    >
+                      <div className="px-4 py-2 mb-1 border-b border-slate-100">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t(item.key)}</span>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
+                      {subNavItems(item.key).map((subItem) => (
+                        <Link
+                          key={subItem.href}
+                          href={`/${locale}${subItem.href}`}
+                          onClick={() => setActiveDropdown(null)}
+                          className="group/item flex items-start gap-3 mx-2 px-3 py-2.5 rounded-xl hover:bg-blue-50/70 transition-colors"
+                        >
+                          <ChevronRight className="h-3.5 w-3.5 text-slate-300 mt-[3px] group-hover/item:text-blue-500 group-hover/item:translate-x-0.5 transition-all shrink-0" />
+                          <div>
+                            <p className="text-[13px] font-semibold text-slate-700 group-hover/item:text-blue-600 leading-snug">
+                              {t(subItem.labelKey)}
+                            </p>
+                            <p className="text-[11px] text-slate-400 mt-0.5 leading-snug line-clamp-1">
+                              {t(subItem.descKey)}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
 
               {/* Contact — simple link */}
               <Link
