@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContact } from "@/components/floating/FloatingContact";
+import { AIChatbot } from "@/components/ai/AIChatbot";
 import { WebVitals } from "@/components/performance/WebVitals";
 import { PerformanceOptimizations } from "@/components/performance/PerformanceOptimizations";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
@@ -28,6 +29,7 @@ import "../globals.css";
  *    NEXT_PUBLIC_GSC_VERIFICATION="your-verification-token"
  * 6. Uncomment the line below and remove this comment
  */
+// Uncomment after adding real verification token to .env.local:
 // {process.env.NEXT_PUBLIC_GSC_VERIFICATION && (
 //   <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION} />
 // )}
@@ -237,6 +239,7 @@ export default async function LocaleLayout({
           </main>
           <Footer />
           <FloatingContact />
+          <AIChatbot />
           <ExitIntentPopup />
           <WebVitals />
         </div>

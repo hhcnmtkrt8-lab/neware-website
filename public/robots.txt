@@ -2,9 +2,11 @@
 User-agent: *
 Allow: /
 
-# Disallow admin areas
+# Disallow internal paths
+Disallow: /api/
 Disallow: /admin/
-Disallow: /api/admin/
+Disallow: /_next/
+Disallow: /admin
 
-# Sitemap
-Sitemap: https://www.neware.com.cn/sitemap.xml
+# Sitemap - batteryxlab.shop
+Sitemap: https://www.batteryxlab.shop/sitemap.xml

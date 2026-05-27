@@ -1,10 +1,9 @@
 import { MetadataRoute } from "next";
 import { locales } from "@/i18n/request";
 import { products } from "@/data/neware";
-import { vietnamProducts } from "@/data/neware-vietnam";
+import { vietnamProductRoutes } from "@/data/neware-vietnam";
 
 const SITE_URL = process.env.SITE_URL ?? "https://www.neware.com.cn";
-const SITE_URL_VN = process.env.SITE_URL_VN ?? "https://neware.vn";
 
 const ogImages: Record<string, string> = {
   en: "/og-en.png",
@@ -178,30 +177,6 @@ export default function sitemap(): SitemapEntry[] {
       links: buildHreflangs("/case-studies"),
     });
   }
-
-  for (const product of vietnamProducts) {
-    entries.push({
-      url: `${SITE_URL_VN}/vi/resistors/${product.id}`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${SITE_URL_VN}/og-vi.png`],
-      links: [
-        { locale: "vi", url: `${SITE_URL_VN}/vi/resistors/${product.id}` },
-      ],
-    });
-  }
-
-  entries.push({
-    url: `${SITE_URL_VN}/vi/resistors`,
-    lastModified,
-    changeFrequency: "weekly",
-    priority: 0.9,
-    images: [`${SITE_URL_VN}/og-vi.png`],
-    links: [
-      { locale: "vi", url: `${SITE_URL_VN}/vi/resistors` },
-    ],
-  });
 
   return entries;
 }
