@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sienna-turtle-284445.hostingersite.com/sitemap.xml
