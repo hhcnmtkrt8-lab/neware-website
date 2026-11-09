@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applications — Cellaris</title>
+<meta name="description" content="Battery test configurations for materials research, solid-state and pressure work, DCIR/HPPC characterisation, and formation & grading.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-lang="en" data-page="applications">
+<div id="site-header"></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Applications</div>
+    <h1>The experiment decides the configuration.</h1>
+    <p>Four application areas, each with the test method, the auxiliary hardware and the instrument that fits. Where a method has a known source of error, we say so.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+
+    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:44px 0;border-bottom:1px solid var(--line)">
+      <div>
+        <div class="mono" style="font-size:11.5px;letter-spacing:.18em;color:var(--accent)">A1 · MATERIALS RESEARCH</div>
+        <h2 style="font-size:32px;margin:14px 0 16px">The first fifty cycles decide everything.</h2>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8">Coin and half cells are tested at currents where a single range cannot resolve both the charge plateau and the trickle at the end of discharge. Four ranges keep resolution proportional to the signal, and the auxiliary channels log the chamber temperature on the same time base.</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><th>Methods</th><td>GITT · PITT · CV · galvanostatic cycling</td></tr>
+            <tr><th>Typical current</th><td class="num">10 µA – 5 mA</td></tr>
+            <tr><th>Instrument</th><td>CT-4008Tn-5V50mA · CT-9000-5V15A</td></tr>
+            <tr><th>Critical spec</th><td>Accuracy at range 1, not at full scale</td></tr>
+            <tr><th>Common error</th><td>Reading ±0.02% of a 15 A range as 0.02% of the measured value</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:44px 0;border-bottom:1px solid var(--line)">
+      <div>
+        <div class="mono" style="font-size:11.5px;letter-spacing:.18em;color:var(--accent)">A2 · SOLID-STATE &amp; PRESSURE</div>
+        <h2 style="font-size:32px;margin:14px 0 16px">Pressure is a variable, not a fixture detail.</h2>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8">Solid-state cells change thickness as they cycle. If stack pressure is held by a spring, the force drifts and the impedance drift is attributed to the material. A pressure-controlled clamp with a logged load cell turns that into a measured variable you can plot.</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><th>Methods</th><td>Pressure-controlled cycling · EIS-ready fixtures</td></tr>
+            <tr><th>Range</th><td class="num">0.1 – 2 t (fixture dependent)</td></tr>
+            <tr><th>Instrument</th><td>CT-9000 + PTF pressure clamp</td></tr>
+            <tr><th>Logged channels</th><td>Current · voltage · force · temperature</td></tr>
+            <tr><th>Common error</th><td>Force logged on a separate clock from the electrical data</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:44px 0;border-bottom:1px solid var(--line)">
+      <div>
+        <div class="mono" style="font-size:11.5px;letter-spacing:.18em;color:var(--accent)">A3 · FAST CHARACTERISATION</div>
+        <h2 style="font-size:32px;margin:14px 0 16px">A slow transition hides the ohmic drop.</h2>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8">DCIR and HPPC separate the instantaneous resistance from the polarisation that follows it. If the current transition takes milliseconds, the two merge and the extracted resistance depends on the fit window rather than the cell.</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><th>Methods</th><td>DCIR · HPPC · pulse trains · 10 s / 30 s steps</td></tr>
+            <tr><th>Transition</th><td class="num">≤150 µs (9000) · ≤1.5 ms (4000)</td></tr>
+            <tr><th>Logging</th><td class="num">Up to 10 kHz per channel</td></tr>
+            <tr><th>Instrument</th><td>CT-9000-5V15A · CE-6000</td></tr>
+            <tr><th>Common error</th><td>Sampling interval longer than the pulse width</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:44px 0">
+      <div>
+        <div class="mono" style="font-size:11.5px;letter-spacing:.18em;color:var(--accent)">A4 · FORMATION &amp; GRADING</div>
+        <h2 style="font-size:32px;margin:14px 0 16px">When formation data has to mean something.</h2>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8">Formation is usually run on cost-optimised equipment and then compared against research data from a different class of instrument. Sharing the same front end and the same export schema removes that discontinuity — and makes traceability a data property rather than a procedure.</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><th>Methods</th><td>Formation · grading · OCV/IR sorting</td></tr>
+            <tr><th>Channel count</th><td class="num">8 – 160 per cabinet</td></tr>
+            <tr><th>Instrument</th><td>CE-4000 · CT-4000 high-density racks</td></tr>
+            <tr><th>Traceability</th><td>Per-channel audit trail, timestamped</td></tr>
+            <tr><th>Common error</th><td>Different accuracy class between R&amp;D and production</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div><h2>Bring the protocol, not the brochure.</h2><p>Pulse widths, current steps, temperature profile and expected duration are enough to size a configuration.</p></div>
+    <a class="btn primary" href="contact.html">Send a protocol <span class="arw">→</span></a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

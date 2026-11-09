@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare — Cellaris</title>
+<meta name="description" content="An application-based mapping from Arbin, Maccor, BioLogic and Chroma platforms to Cellaris configurations — plus the eight questions worth asking any vendor.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-lang="en" data-page="compare">
+<div id="site-header"></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Compare</div>
+    <h1>An honest mapping, not an equivalence claim.</h1>
+    <p>Premium platforms are good instruments. The question is whether the extra lead time, licence structure and service contract buy anything your experiment needs. This page shows where we fit, and where we do not.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="sec-idx">01 — Application mapping</div>
+    <h2 style="font-size:34px;margin:10px 0 26px">If you are evaluating this, look at that.</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th>Platform family</th><th>Typical application</th><th class="us">Closest Cellaris configuration</th></tr></thead>
+        <tbody>
+          <tr><td class="model">Arbin LBT benchtop / MSTAT</td><td>Benchtop research cycling, pulse and DCIR</td><td class="num us">CT-9000 · CT-4000</td></tr>
+          <tr><td class="model">Arbin LBT rack systems</td><td>High-channel-count laboratory racks</td><td class="num us">CT-9000 · CE-6000</td></tr>
+          <tr><td class="model">Maccor 4200 / 4300</td><td>Research cycling with external chambers</td><td class="num us">CT-4000 · CT-9000</td></tr>
+          <tr><td class="model">BioLogic BCS-800</td><td>EIS-coupled cycling for materials work</td><td class="num us">CT-8000 · CT-9000</td></tr>
+          <tr><td class="model">Chroma 17010</td><td>Module and pack cycling</td><td class="num us">CE-6000 module / pack</td></tr>
+          <tr><td class="model">Any premium platform</td><td>Pack testing above 800 V</td><td class="num us">CE-6002 · CE-6001N</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-line" style="margin-top:26px">Mapping reflects fit for the stated application, based on published datasheets and application notes (November 2026). It is not a claim that two instruments produce identical measurements.</p>
+  </div>
+</section>
+
+<section class="sec tight" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-idx">02 — Evaluation criteria</div>
+    <h2 style="font-size:34px;margin:10px 0 14px">Eight questions worth asking any vendor.</h2>
+    <p style="color:var(--muted);max-width:60ch;margin-bottom:30px">These are the questions that separate a datasheet from a working experiment. Our answers are in the right-hand column — ask the same of everyone on your shortlist.</p>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th style="width:34%">Question</th><th>Why it matters</th><th style="width:24%">Our answer</th></tr></thead>
+        <tbody>
+          <tr><td>Accuracy is quoted over which range?</td><td>±0.02% of a 15 A range is 3 mA. On a 15 mA range it is 3 µA.</td><td class="num">±0.02% F.S. per range; ±3 µA on range 1</td></tr>
+          <tr><td>How fast does current actually settle?</td><td>A slow transition folds ohmic drop into the polarisation tail and distorts DCIR.</td><td class="num">≤150 µs (9000) · ≤1.5 ms (4000)</td></tr>
+          <tr><td>What is the logging interval, and can it change mid-test?</td><td>Cycle life and pulse work need different rates on the same channel.</td><td class="num">Up to 10 kHz, programmable per step</td></tr>
+          <tr><td>Can I get the raw data out without a licence?</td><td>Your archive outlives the instrument and the vendor relationship.</td><td class="num">CSV · XLSX · SQL · REST · Python</td></tr>
+          <tr><td>Are auxiliary channels on the same time base?</td><td>Temperature and pressure lose meaning if they are sampled on a different clock.</td><td class="num">Yes — same acquisition engine</td></tr>
+          <tr><td>What is the delivered lead time, not the catalogue lead time?</td><td>Laboratory schedules are built around instrument arrival.</td><td class="num">4–8 weeks typical</td></tr>
+          <tr><td>Where is calibration performed, and how long does it take?</td><td>Shipping an instrument to another continent stops the experiment.</td><td class="num">EU and North America partners</td></tr>
+          <tr><td>What happens to my test programs if the software changes?</td><td>Migration cost is rarely in the quote.</td><td class="num">Documented format + import tools</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <div class="sec-idx">03 — What we do not claim</div>
+      <h2 style="font-size:32px;margin:10px 0 18px">The limits, stated up front.</h2>
+      <ul style="color:var(--muted);font-size:15px;line-height:1.9;padding-left:18px;margin:0">
+        <li>We do not claim identical measurement results to any other platform. Two instruments can both be accurate and still disagree inside their uncertainty bands.</li>
+        <li>We do not supply a high-end potentiostat for impedance spectroscopy as a standalone product; we integrate with EIS hardware rather than replace it.</li>
+        <li>We do not offer a global on-site service organisation on the scale of the largest premium vendors. We offer regional calibration partners and documented intervals.</li>
+        <li>We do not publish competitor pricing. Configurations are not comparable until channel count, fixtures and software are included.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec-idx">04 — Where we do win</div>
+      <h2 style="font-size:32px;margin:10px 0 18px">Three defensible advantages.</h2>
+      <ul style="color:var(--muted);font-size:15px;line-height:1.9;padding-left:18px;margin:0">
+        <li><b style="color:var(--ink)">Range architecture.</b> Four auto-switching ranges on the entry model, not only the flagship.</li>
+        <li><b style="color:var(--ink)">Data freedom.</b> No per-seat licence, documented API, direct database access.</li>
+        <li><b style="color:var(--ink)">Total cost of ownership.</b> Fixtures, spare channels and calibration are priced as accessories, not as a service contract.</li>
+      </ul>
+      <a class="btn primary" href="contact.html" style="margin-top:28px">Put your protocol against it <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

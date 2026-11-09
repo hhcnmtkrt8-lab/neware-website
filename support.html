@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support &amp; downloads — Cellaris</title>
+<meta name="description" content="Datasheets, manuals, calibration intervals, spare fixtures and service information for Cellaris battery test systems.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-lang="en" data-page="support">
+<div id="site-header"></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Support</div>
+    <h1>Documents, calibration and the questions we get asked.</h1>
+    <p>Datasheets are per model. Manuals and software are versioned. Calibration intervals are stated rather than implied.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="sec-idx">01 — Downloads</div>
+    <h2 style="font-size:30px;margin:10px 0 22px">By document type</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th>Document</th><th>Applies to</th><th>Version</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td class="model">CT-4000 series datasheet</td><td>CT-4008Q / CT-4008Tn</td><td class="num">2026.2</td><td>PDF</td></tr>
+          <tr><td class="model">CT-9000 series datasheet</td><td>CT-9000 / CT-9008</td><td class="num">2026.2</td><td>PDF</td></tr>
+          <tr><td class="model">CE-6000 series datasheet</td><td>Module and pack channels</td><td class="num">2026.1</td><td>PDF</td></tr>
+          <tr><td class="model">Chamber &amp; all-in-one datasheet</td><td>WHW / WGDW / WFB</td><td class="num">2026.1</td><td>PDF</td></tr>
+          <tr><td class="model">BTS software manual</td><td>All platforms</td><td class="num">9.1</td><td>PDF</td></tr>
+          <tr><td class="model">REST API reference</td><td>All platforms</td><td class="num">2.4</td><td>PDF / HTML</td></tr>
+          <tr><td class="model">Data format specification</td><td>CSV / SQL schema</td><td class="num">2.4</td><td>PDF</td></tr>
+          <tr><td class="model">Calibration procedure</td><td>All platforms</td><td class="num">2026.1</td><td>PDF</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-line" style="margin-top:26px">Documents are released per model and per software version. Request the set that matches your serial number and we will send the current revision.</p>
+    <a class="btn primary" href="contact.html" style="margin-top:24px">Request documents <span class="arw">→</span></a>
+  </div>
+</section>
+
+<section class="sec tight" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-idx">02 — Calibration &amp; service</div>
+    <h2 style="font-size:30px;margin:10px 0 18px">Stated, not implied.</h2>
+    <div class="svc" style="margin-top:16px">
+      <div><div class="v mono">12 mo</div><div class="k">Recommended calibration interval</div></div>
+      <div><div class="v mono">EU / NA</div><div class="k">Regional calibration partners</div></div>
+      <div><div class="v mono">In region</div><div class="k">Spare fixtures and consumables</div></div>
+      <div><div class="v mono">2 days</div><div class="k">Target response on technical tickets</div></div>
+    </div>
+    <p class="note-line" style="margin-top:30px">Calibration is performed against traceable references and returned with measured values per range — not a pass/fail stamp. Where a channel is out of tolerance, the adjustment is recorded in the certificate.</p>
+  </div>
+</section>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="sec-idx">03 — FAQ</div>
+    <h2 style="font-size:30px;margin:10px 0 24px">Six questions, answered plainly.</h2>
+    <dl class="kv" style="grid-template-columns:1fr;gap:0">
+      <div style="border-top:1px solid var(--line);padding:22px 0">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">Can I run my existing test programs?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">Schedules are imported from a documented format. For migrations from another platform, we translate a representative program and compare the first cycles before the full set is converted.</dd>
+      </div>
+      <div style="border-top:1px solid var(--line);padding:22px 0">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">What happens to my archive if I stop using the software?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">CSV and XLSX exports are plain files; the SQL schema is documented. The archive does not require a licence to read.</dd>
+      </div>
+      <div style="border-top:1px solid var(--line);padding:22px 0">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">Do you integrate with third-party chambers and EIS hardware?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">Yes — chambers via standard interfaces, and EIS instruments alongside the cycler rather than as a replacement. The auxiliary channels log on the same time base.</dd>
+      </div>
+      <div style="border-top:1px solid var(--line);padding:22px 0">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">What is the warranty?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">One year on the instrument, with the calibration interval documented. Extended coverage is quoted as an option, not bundled.</dd>
+      </div>
+      <div style="border-top:1px solid var(--line);padding:22px 0">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">Can I buy channels in stages?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">Yes. Cabinets are configured by module; a 16-channel start can be expanded without replacing the controller.</dd>
+      </div>
+      <div style="border-top:1px solid var(--line);padding:22px 0;border-bottom:1px solid var(--line)">
+        <dt style="font-size:16px;color:var(--ink);margin-bottom:8px">Which markets do you ship to?</dt>
+        <dd style="color:var(--muted);font-size:14.5px">North and South America, Europe and selected CIS markets through local partners. Export documentation is prepared per destination.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software &amp; data — Cellaris</title>
+<meta name="description" content="BTS control software with open data: CSV, XLSX, SQL Server, PostgreSQL, REST API and a Python client. No per-seat licence.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-lang="en" data-page="software">
+<div id="site-header"></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Software &amp; data</div>
+    <h1>The data layer is part of the instrument.</h1>
+    <p>Test programs, raw logs and auxiliary channels are written to a schema you can query. There is no per-seat licence and no export format that only one vendor can open.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap two">
+    <div>
+      <div class="sec-idx">01 — Control</div>
+      <h2 style="font-size:30px;margin:10px 0 16px">BTS control</h2>
+      <p style="color:var(--muted);font-size:15px;line-height:1.8">Schedules are built from programmable steps: charge, discharge, rest, pulse, loop and formula-based termination. A single program can hold up to 254 editable lines, which is enough for multi-stage formation protocols without splitting them across templates.</p>
+      <ul style="color:var(--muted);font-size:14.5px;line-height:1.9;padding-left:18px;margin-top:18px">
+        <li>Per-step logging interval, down to 10 kHz on the 9000 series</li>
+        <li>Safety limits per channel: voltage, current, temperature, capacity</li>
+        <li>Auxiliary channels (voltage, NTC/PT100, pressure) in the same schedule</li>
+        <li>Chamber binding and multi-zone control</li>
+      </ul>
+    </div>
+    <div>
+      <img src="assets/img/software.jpg" alt="BTS software interface" style="border:1px solid var(--line);background:#fff">
+      <p class="mono" style="font-size:11px;color:var(--muted);margin-top:10px">BTS control · schedule editor and live channel view</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="sec-idx">02 — Data path</div><h2>From channel to query in one hop.</h2></div>
+      <p>Raw samples land in a relational schema with channel identity and timestamps intact. Export is a view of that schema, not a separate conversion step.</p>
+    </div>
+    <div class="arch" style="align-items:start">
+      <div class="arch-copy">
+        <table class="tbl" style="color:#fff">
+          <thead><tr><th style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.2)">Output</th><th style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.2)">Use</th></tr></thead>
+          <tbody>
+            <tr><td style="border-color:rgba(255,255,255,.12)">CSV / XLSX</td><td style="border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)">Quick analysis, MATLAB, Origin, pandas</td></tr>
+            <tr><td style="border-color:rgba(255,255,255,.12)">SQL Server / PostgreSQL</td><td style="border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)">Direct queries on the live archive</td></tr>
+            <tr><td style="border-color:rgba(255,255,255,.12)">REST API</td><td style="border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)">LIMS integration, dashboards, automation</td></tr>
+            <tr><td style="border-color:rgba(255,255,255,.12)">Python client</td><td style="border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)">Scripted analysis and batch processing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <pre class="mono" style="background:#0f1417;border:1px solid rgba(255,255,255,.12);padding:20px;font-size:12px;line-height:1.8;color:#c8d6cf;overflow:auto;margin:0"><code># pull one channel, one cycle, raw samples
+from cellaris import Client
+
+c = Client("https://lab.example/", token=TOKEN)
+df = c.samples(
+    channel="R04-C07",
+    cycle=3,
+    fields=["t", "i", "v", "temp"],
+)
+df.to_parquet("cycle03.parquet")</code></pre>
+        <p style="font-size:12px;color:var(--muted-dark);margin-top:12px">Illustrative client usage. The API reference ships with the instrument.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="sec-idx">03 — Licensing</div>
+    <h2 style="font-size:30px;margin:10px 0 18px">No seats, no dongles, no expiry.</h2>
+    <div class="svc" style="margin-top:20px">
+      <div><div class="v mono">0</div><div class="k">Per-seat licence fees</div></div>
+      <div><div class="v mono">Open</div><div class="k">CSV / XLSX schema documented</div></div>
+      <div><div class="v mono">API</div><div class="k">REST endpoints documented per version</div></div>
+      <div><div class="v mono">Archive</div><div class="k">Data readable after the instrument leaves</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

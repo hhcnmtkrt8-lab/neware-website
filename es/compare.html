@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparativa — Cellaris</title>
+<meta name="description" content="Mapeo por aplicación desde Arbin, Maccor, BioLogic y Chroma hacia configuraciones Cellaris, y ocho preguntas que conviene hacer a cualquier proveedor.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-lang="es" data-page="compare">
+<div id="site-header"></div>
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Comparativa</div>
+    <h1>Un mapeo honesto, no una equivalencia.</h1>
+    <p>Las plataformas premium son buenos instrumentos. La pregunta es si el plazo, la licencia y el contrato de servicio aportan algo que su experimento necesite. Aquí está dónde encajamos y dónde no.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="sec-idx">01 — Mapeo por aplicación</div>
+    <h2 style="font-size:34px;margin:10px 0 26px">Si evalúa esto, mire aquello.</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th>Familia de plataforma</th><th>Aplicación típica</th><th class="us">Configuración Cellaris más cercana</th></tr></thead>
+        <tbody>
+          <tr><td class="model">Arbin LBT benchtop / MSTAT</td><td>Ciclado de laboratorio, pulso y DCIR</td><td class="num us">CT-9000 · CT-4000</td></tr>
+          <tr><td class="model">Arbin LBT rack</td><td>Racks de laboratorio de alto canal</td><td class="num us">CT-9000 · CE-6000</td></tr>
+          <tr><td class="model">Maccor 4200 / 4300</td><td>Ciclado con cámaras externas</td><td class="num us">CT-4000 · CT-9000</td></tr>
+          <tr><td class="model">BioLogic BCS-800</td><td>Ciclado con EIS para materiales</td><td class="num us">CT-8000 · CT-9000</td></tr>
+          <tr><td class="model">Chroma 17010</td><td>Ensayos de módulo y pack</td><td class="num us">CE-6000 módulo / pack</td></tr>
+          <tr><td class="model">Cualquier plataforma premium</td><td>Packs por encima de 800 V</td><td class="num us">CE-6002 · CE-6001N</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-line" style="margin-top:26px">El mapeo refleja idoneidad para la aplicación indicada, según datasheets y notas publicadas (noviembre de 2026). No afirma que dos instrumentos midan lo mismo.</p>
+  </div>
+</section>
+
+<section class="sec tight" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-idx">02 — Criterios de evaluación</div>
+    <h2 style="font-size:34px;margin:10px 0 14px">Ocho preguntas para cualquier proveedor.</h2>
+    <p style="color:var(--muted);max-width:62ch;margin-bottom:30px">Estas preguntas separan una ficha técnica de un experimento que funciona. Nuestras respuestas están a la derecha; haga las mismas al resto de su lista corta.</p>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th style="width:36%">Pregunta</th><th>Por qué importa</th><th style="width:24%">Nuestra respuesta</th></tr></thead>
+        <tbody>
+          <tr><td>¿La precisión se declara sobre qué rango?</td><td>±0,02 % de un rango de 15 A son 3 mA. En un rango de 15 mA son 3 µA.</td><td class="num">±0,02 % F.S. por rango; ±3 µA en rango 1</td></tr>
+          <tr><td>¿Cuánto tarda en establecerse la corriente?</td><td>Una transición lenta mezcla la caída óhmica con la cola de polarización y distorsiona el DCIR.</td><td class="num">≤150 µs (9000) · ≤1,5 ms (4000)</td></tr>
+          <tr><td>¿Puedo sacar los datos crudos sin licencia?</td><td>Su archivo dura más que el instrumento y que la relación con el proveedor.</td><td class="num">CSV · XLSX · SQL · REST · Python</td></tr>
+          <tr><td>¿Los canales auxiliares comparten base de tiempo?</td><td>Temperatura y presión pierden sentido con otro reloj de muestreo.</td><td class="num">Sí, mismo motor de adquisición</td></tr>
+          <tr><td>¿Cuál es el plazo real de entrega?</td><td>El calendario del laboratorio se organiza alrededor de la llegada del equipo.</td><td class="num">4–8 semanas típicas</td></tr>
+          <tr><td>¿Dónde se calibra y cuánto tarda?</td><td>Enviar el instrumento a otro continente detiene el experimento.</td><td class="num">Socios en UE y Norteamérica</td></tr>
+          <tr><td>¿Qué pasa con mis programas si cambia el software?</td><td>El coste de migración casi nunca está en la oferta.</td><td class="num">Formato documentado + importación</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <div class="sec-idx">03 — Lo que no afirmamos</div>
+      <h2 style="font-size:30px;margin:10px 0 18px">Los límites, por delante.</h2>
+      <ul style="color:var(--muted);font-size:15px;line-height:1.9;padding-left:18px;margin:0">
+        <li>No afirmamos resultados idénticos a otra plataforma: dos instrumentos exactos pueden discrepar dentro de sus incertidumbres.</li>
+        <li>No suministramos un potenciostato de gama alta para espectroscopía de impedancia como producto independiente; nos integramos con el hardware EIS.</li>
+        <li>No tenemos una organización de servicio global del tamaño de los mayores proveedores premium, sino socios regionales de calibración e intervalos documentados.</li>
+        <li>No publicamos precios de competidores: las configuraciones no son comparables hasta incluir canales, utillaje y software.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec-idx">04 — Dónde ganamos</div>
+      <h2 style="font-size:30px;margin:10px 0 18px">Tres ventajas defendibles.</h2>
+      <ul style="color:var(--muted);font-size:15px;line-height:1.9;padding-left:18px;margin:0">
+        <li><b style="color:var(--ink)">Arquitectura de rangos.</b> Cuatro rangos automáticos desde el modelo base, no solo en el tope de gama.</li>
+        <li><b style="color:var(--ink)">Libertad de datos.</b> Sin licencias por puesto, API documentada y acceso directo a base de datos.</li>
+        <li><b style="color:var(--ink)">Coste total de propiedad.</b> Utillaje, canales de repuesto y calibración se cotizan como accesorios, no como contrato de servicio.</li>
+      </ul>
+      <a class="btn primary" href="../contact.html" style="margin-top:28px">Pruébelo con su protocolo <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
