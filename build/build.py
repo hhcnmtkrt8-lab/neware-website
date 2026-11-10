@@ -405,6 +405,8 @@ def picture_wrap(html):
         tag, src = m.group(0), m.group(1)
         if "-480" in src or "-960" in src or src.endswith(".svg") or src.startswith("data:"):
             return tag
+        if 'fetchpriority="high"' in tag:
+            return tag
         if src.startswith("../"):
             rel, pfx = src[3:], "../"
         elif src.startswith("/"):
