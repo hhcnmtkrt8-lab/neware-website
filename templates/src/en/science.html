@@ -1,0 +1,84 @@
+﻿<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Science</div>
+    <h1>Notes on measurement, written to be checked.</h1>
+    <p>Each note states the cell, the protocol, the instrument configuration and the expected uncertainty. Where a manufacturer claim depends on a range, we show the arithmetic.</p>
+  </div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="notes">
+      <article class="note rv">
+        <div class="kind">AN-014 · Range architecture</div>
+        <h3>What ±0.02% F.S. actually buys you at microamp currents</h3>
+        <p>±0.02% of full scale is a different number on every range. This note works through the arithmetic for a 15 A channel and a 15 mA channel, and shows where the two disagree.</p>
+        <div class="meta"><span>8 min read</span><span>CT-9000</span></div>
+      </article>
+      <article class="note rv d1">
+        <div class="kind">AN-021 · Pulse testing</div>
+        <h3>DCIR and HPPC: the cost of a slow current transition</h3>
+        <p>Comparing 150 µs and 2 ms front ends on the same cell, and why the extracted resistance changes with the fit window rather than the cell.</p>
+        <div class="meta"><span>6 min read</span><span>CT-9000 · CE-6000</span></div>
+      </article>
+      <article class="note rv d2">
+        <div class="kind">MN-003 · Pressure</div>
+        <h3>Stack pressure as a logged variable in solid-state cycling</h3>
+        <p>Spring-loaded versus pressure-controlled clamps, and how to keep force on the same time base as current and temperature.</p>
+        <div class="meta"><span>7 min read</span><span>PTF fixtures</span></div>
+      </article>
+      <article class="note rv">
+        <div class="kind">AN-009 · Coulombic efficiency</div>
+        <h3>When CE appears to exceed 100%</h3>
+        <p>Current offset, temperature drift and range-boundary effects: three causes of impossible coulombic efficiency, and how to identify which one you have.</p>
+        <div class="meta"><span>5 min read</span><span>CT-4000 · CT-9000</span></div>
+      </article>
+      <article class="note rv d1">
+        <div class="kind">AN-017 · Data provenance</div>
+        <h3>An audit trail that survives a reviewer</h3>
+        <p>Timestamping, channel identity, calibration traceability and why a spreadsheet export is not a data management plan.</p>
+        <div class="meta"><span>6 min read</span><span>Software</span></div>
+      </article>
+      <article class="note rv d2">
+        <div class="kind">MN-006 · Temperature</div>
+        <h3>Chamber air versus cell surface temperature</h3>
+        <p>Why a chamber setpoint is not a cell temperature, and where to place the auxiliary sensor so the reported value means something.</p>
+        <div class="meta"><span>4 min read</span><span>WHW · WGDW</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<article class="sec" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="prose">
+      <div class="mono" style="font-size:11.5px;letter-spacing:.18em;color:var(--accent)">APPLICATION NOTE · AN-014</div>
+      <h2 style="font-size:clamp(28px,3.4vw,40px);margin:16px 0 8px;letter-spacing:-.02em">What ±0.02% F.S. actually buys you at microamp currents</h2>
+      <p style="color:var(--muted);font-size:14px">Published 2026 · Cellaris Instruments · applies to CT-4000 and CT-9000 series</p>
+
+      <h2 style="margin-top:44px">The claim, and the arithmetic behind it</h2>
+      <p>Accuracy expressed as a percentage of full scale is only meaningful when the range is stated. On a single 15 A channel, ±0.02% F.S. equals ±3 mA. That is a perfectly good specification for a power cell and a useless one for the tail of a coin-cell discharge, where the current may fall below 100 µA.</p>
+      <p>A four-range front end changes the denominator. On the CT-9000-5V15A, range 1 spans 15 µA to 15 mA; ±0.02% of that range is ±3 µA. The same instrument, in the same test, resolves three orders of magnitude more detail than a single-range channel — not because the electronics are different, but because the range is.</p>
+
+      <h2>Where the boundary matters</h2>
+      <p>Auto-ranging is only useful if the transition is clean. A range change that introduces a settling transient will appear as a step in the recorded current at exactly the moment the experiment crosses the boundary — usually during the voltage hold at the end of charge, which is where coulombic efficiency is calculated.</p>
+      <p>Two practical checks when evaluating any instrument:</p>
+      <ul>
+        <li>Run a slow ramp through a range boundary and plot the current derivative. A discontinuity indicates a settling artefact rather than cell behaviour.</li>
+        <li>Compare the integrated charge on either side of the boundary against a reference. If the total drifts, the transition is contributing error.</li>
+      </ul>
+
+      <h2>What this does not fix</h2>
+      <p>Range architecture does not correct a current offset, a temperature gradient between the cell and the sensor, or a cable resistance that sits inside the voltage sense path. Those are installation and calibration issues and they dominate at microamp levels. A four-range instrument gives you the resolution to see them; it does not remove them.</p>
+
+      <p class="note-line" style="margin-top:40px">Test conditions for the figures in this note: 2032 coin cell, LiFePO₄ cathode, 1 M LiPF₆ in EC/DEC, 25 °C chamber, C/20 formation then C/2 cycling. Instrument configuration: CT-9000-5V15A, range 1, 10 Hz logging.</p>
+    </div>
+  </div>
+</article>
+
+<section class="cta">
+  <div class="wrap">
+    <div><h2>Want the full note set?</h2><p>Application notes, method notes and the data-format specification are available on request.</p></div>
+    <a class="btn primary" href="contact.html">Request the note set <span class="arw">→</span></a>
+  </div>
+</section>

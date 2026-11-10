@@ -1,0 +1,31 @@
+# Cellaris Instruments
+
+> Research-grade battery test systems: four-range precision, ±0.02% F.S., 150 µs current response, open data.
+
+Manufactured by Neware Technology (est. 1998).
+
+## Instruments
+
+- CT-4008Q-5V6A — Cell, 0–5 V, 0.5 mA – 6 A, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ct-4008q-5v6a.html
+- CT-4008Tn-5V50mA — Cell, 0–5 V, 10 µA – 50 mA, 3 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ct-4008tn-5v50ma.html
+- CT-9000-5V15A — Cell, 0–5 V, 15 µA – 15 A, 4 auto-ranges, ±0.02% FS · ±3 µA (range 1) — https://sienna-turtle-284445.hostingersite.com/products/ct-9000-5v15a.html
+- CT-9008-5V300mA — Cell, 0–5 V, 1 µA – 300 mA, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ct-9008-5v300ma.html
+- CE-4008D-5V30A — Cell, 0–5 V, — 30 A per channel, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ce-4008d-5v30a.html
+- CE-6016-Pro-5V300A — Cell, 0–5 V, — 300 A per channel, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ce-6016-pro-5v300a.html
+- CE-6008N-100V100A — Module, 0–100 V, — 100 A per channel, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ce-6008n-100v100a.html
+- CE-6002-1500V200A — Pack, 0–1500 V, — 200 A per channel, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ce-6002-1500v200a.html
+- CE-6001N-3000V200A — Pack, 0–3000 V, — 200 A per channel, 4 auto-ranges, ±0.02% FS — https://sienna-turtle-284445.hostingersite.com/products/ce-6001n-3000v200a.html
+- WHW-25L-S-16CH — Chamber, —, —, —, ±0.3 °C (chamber) — https://sienna-turtle-284445.hostingersite.com/products/whw-25l-s-16ch.html
+- WHW-200L-2Z — Chamber, —, —, —, ±0.5 °C (per zone) — https://sienna-turtle-284445.hostingersite.com/products/whw-200l-2z.html
+- WGDW-20L — Chamber, —, —, —, ±0.3 °C — https://sienna-turtle-284445.hostingersite.com/products/wgdw-20l.html
+- WFB-220L-2K — Chamber, —, —, —, — — https://sienna-turtle-284445.hostingersite.com/products/wfb-220l-2k.html
+- PTF-ZJ-F-600A — Fixture, —, 600 A, —, — — https://sienna-turtle-284445.hostingersite.com/products/ptf-zj-f-600a.html
+- CA-4008N-1U-T — Auxiliary, 0–5 V aux, —, —, ±0.1 °C (NTC) — https://sienna-turtle-284445.hostingersite.com/products/ca-4008n-1u-t.html
+
+## Pages
+
+- Instruments: https://sienna-turtle-284445.hostingersite.com/products.html
+- Compare: https://sienna-turtle-284445.hostingersite.com/compare.html
+- Science: https://sienna-turtle-284445.hostingersite.com/science.html
+- Support: https://sienna-turtle-284445.hostingersite.com/support.html
+- Company: https://sienna-turtle-284445.hostingersite.com/about.html
