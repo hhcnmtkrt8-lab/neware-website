@@ -90,6 +90,28 @@ p{margin:0}
 .hero-rail .v small{font-size:13px; color:var(--muted-dark); margin-left:4px}
 .hero-rail .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-top:6px}
 
+/* hero — variant A: oversized type, one action */
+.hero--strong h1{font-size:clamp(54px,9vw,128px); line-height:.9; letter-spacing:-.045em; max-width:16ch}
+html[lang="ru"] .hero--strong h1,
+html[lang="es"] .hero--strong h1{font-size:clamp(38px,6vw,86px); letter-spacing:-.035em}
+.hero--strong .hero-sub{margin-top:30px; max-width:32ch; font-size:clamp(15px,1.5vw,19px); line-height:1.55; color:rgba(255,255,255,.72)}
+.hero--strong .hero-actions{margin-top:44px; align-items:center}
+.hero-link{display:inline-flex; align-items:center; gap:8px; font-size:13.5px; letter-spacing:.02em; color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.32); padding-bottom:4px; transition:border-color .3s var(--ease),color .3s var(--ease)}
+.hero-link:hover{border-color:#fff}
+.hero-link .arw{transition:transform .3s var(--ease)}
+.hero-link:hover .arw{transform:translateX(4px)}
+.hero-scroll{position:absolute; right:var(--gutter); bottom:28px; z-index:3; font-size:10px; letter-spacing:.22em;
+  text-transform:uppercase; color:rgba(255,255,255,.38)}
+
+/* spec band — data moved out of the hero */
+.specband{border-bottom:1px solid var(--line); background:var(--paper)}
+.specband-row{display:grid; grid-template-columns:repeat(5,1fr)}
+.specband-row > div{padding:28px 26px 32px 0; border-right:1px solid var(--line); display:flex; flex-direction:column; gap:7px}
+.specband-row > div:last-child{border-right:0}
+.specband .v{font-size:25px; letter-spacing:-.02em; line-height:1}
+.specband .k{font-size:11.5px; color:var(--muted); letter-spacing:.03em; line-height:1.45}
+
 /* ---------- sections ---------- */
 section{position:relative}
 .sec{padding:110px 0}
@@ -268,6 +290,8 @@ section{position:relative}
   .hero .wrap{padding-top:90px}
   .hero-rail{grid-template-columns:1fr 1fr; margin-top:52px}
   .hero-rail div{padding:16px 16px 20px 0}
+  .specband-row{grid-template-columns:1fr 1fr}
+  .specband-row > div{padding:18px 16px 20px 0}
   .pillars,.partners,.svc{grid-template-columns:1fr}
   .pillar,.svc div{border-right:0; border-bottom:1px solid var(--line); padding:26px 0}
   .sec{padding:72px 0}
